@@ -1,0 +1,59 @@
+CREATE TABLE MOVIES (
+    title varchar(255),
+    director varchar(255),
+    myear int,
+    rating numeric(2,1)
+);
+
+insert into MOVIES (title, director, myear, rating) VALUES ("Fargo", "Coen", 1996, 8.2);
+insert into MOVIES (title, director, myear, rating) VALUES ("Raising Arizona", "Coen", 1987, 7.6);
+insert into MOVIES (title, director, myear, rating) VALUES ("Spiderman", "Raimi", 2002, 7.4);
+insert into MOVIES (title, director, myear, rating) VALUES ("Wonder Boys", "Hanson", 2000, 7.6);
+
+
+CREATE TABLE ACTORS (
+    actor varchar(255),
+    ayear int
+);
+
+
+insert into ACTORS (actor, ayear) VALUES ("Cage", 1964);
+insert into ACTORS (actor, ayear) VALUES ("Hanks", 1956);
+insert into ACTORS (actor, ayear) VALUES ("Maguire", 1975);
+insert into ACTORS (actor, ayear) VALUES ("McDormand", 1957);
+
+CREATE TABLE ACTS (
+    actor varchar(255),
+    title varchar(255)
+);
+
+
+insert into ACTS (actor, title) VALUES ("Cage", "Raising Arizona");
+insert into ACTS (actor, title) VALUES ("Maguire", "Spiderman");
+insert into ACTS (actor, title) VALUES ("Maguire", "Wonder Boys");
+insert into ACTS (actor, title) VALUES ("McDormand", "Fargo");
+insert into ACTS (actor, title) VALUES ("McDormand", "Raising Arizona");
+insert into ACTS (actor, title) VALUES ("McDormand", "Wonder Boys");
+
+
+CREATE TABLE DIRECTORS(
+    director varchar(255),
+    dyear int
+);
+
+
+
+insert into DIRECTORS (director, dyear) VALUES ("Coen", 1954);
+insert into DIRECTORS (director, dyear) VALUES ("Hanson", 1945);
+insert into DIRECTORS (director, dyear) VALUES ("Raimi", 1959);
+
+
+Select * FROM MOVIES where myear > 1997;
+
+Select * FROM MOVIES where director ="Hanson" and myear > 1997;
+
+Select title, rating from MOVIES;
+
+Select * from Actors, directors;
+
+Select m.title from Movies m , Acts a where m.title = a.title and m.director = "Coen" and a.actor = "McDormand"; 
