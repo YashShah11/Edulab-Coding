@@ -1,0 +1,31 @@
+import java.util.Scanner;
+
+public class PrimeNumber {
+
+	public static void main(String[] args) {
+		int flag;
+
+		Scanner sc = new Scanner(System.in);
+		System.out.println("ENter the first number for interval");
+		int firstNumber = sc.nextInt();
+
+		System.out.println("ENter the second  number for interval");
+		int secondNumber = sc.nextInt();
+		for (int i = firstNumber; i <= secondNumber; i++) {
+			if (firstNumber == 0 && secondNumber == 1)
+				continue;
+			flag = 1;
+
+			for (int j = 2; j <= i / 2; ++j) {
+				if (i % j == 0) {
+					flag = 0;
+					break;
+				}
+			}
+			if (flag == 1)
+				System.out.println(i);
+		}
+		sc.close();
+	}
+
+}
