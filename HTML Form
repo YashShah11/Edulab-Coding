@@ -1,0 +1,43 @@
+<html>
+<head>
+<title> Form Page</title>
+</head>
+
+<body>
+<fieldset>
+<legend>Personal Info</legend>
+<form>
+
+Full Name	<input type="text" placeholder="Enter Your Full Name"><br><br>
+
+DOB	<input type="date"><br><br>
+
+Email ID	<input type="email"><br><br>
+
+Contact No.	<input type="number"><br><br>
+
+Address.	<textarea rows="3" cols="10"></textarea><br><br>
+
+Gender	<input type="radio" name="rad">Male<input type="radio" name="rad">Female<br><br>
+
+Subject	<input type="checkbox">HTML<input type="checkbox">CSS<input type="checkbox">JS<br><br>
+
+File Attachment	<input type="file"><br><br>
+
+City	
+<select>
+	<option>Mumbai</option>
+	<option>Pune</option>
+	<option>Nashik</option>
+	<option>Chennai</option>
+	<option>Nagpur</option>
+</select><br><br>
+
+<input type="submit" value="Save">
+<input type="reset" value="Clear">
+
+</form>
+
+</fieldset
+</body>
+</html>
