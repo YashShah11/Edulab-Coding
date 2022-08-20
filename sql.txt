@@ -1,0 +1,26 @@
+CREATE TABLE PRODUCT (
+    p_id int,
+    p_price int,
+    p_name varchar(255),
+    p_warranty int,
+    p_qty int
+);
+
+
+INSERT INTO PRODUCT (p_id, p_price, p_name, p_warranty, p_qty) VALUES (1, 35000, "Washing Machine", 3, 10);
+INSERT INTO PRODUCT (p_id, p_price, p_name, p_warranty, p_qty) VALUES (2, 45000, "Smart TV", 2, 5);
+INSERT INTO PRODUCT (p_id, p_price, p_name, p_warranty, p_qty) VALUES (3, 33000, "AC", 5, 6);
+INSERT INTO PRODUCT (p_id, p_price, p_name, p_warranty) VALUES (4, 20000, "Home Theatre", 1);
+
+
+
+SELECT * FROM PRODUCT where p_warranty > 2;
+
+SELECT * FROM PRODUCT WHERE  p_name = 'Smart TV';
+
+SELECT * FROM PRODUCT WHERE  p_qty IS NULL;
+
+SELECT * FROM PRODUCT WHERE p_price > (SELECT AVG(p_price) FROM PRODUCT);
+
+
+
