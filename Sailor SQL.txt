@@ -1,0 +1,5 @@
+1.--    Select Sname from sailors where Sid IN (Select distinct sid from reserves where bid IN (Select bid from boats where color = "red"));
+2. --    Select s.sid, count(DISTINCT r.bid) as NumberOfBoats from sailors s INNER JOIN reserves r ON s.sid = r.sid group by s.sid having count(DISTINCT r.bid) >= 2
+
+
+5. --  Select sid from sailors where age > 20 and Sid IN (Select distinct sid from reserves where bid IN (Select bid from boats where color != "red"));
